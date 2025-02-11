@@ -13,7 +13,7 @@ import lombok.Data;
 public class Sale_Details {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private long sale_details_id;
 	 private long sale_id;
 	 

@@ -33,7 +33,7 @@ export class AdSalesComponent implements OnInit {
 
   productslist3!: AdProduct[];   // products data
   warehouselist3!: AdWarehouse[];   // warehouse data
-  distributorlist!: AdDistributor[];  // distributor data 
+  distributorlist!: AdDistributor[];  // distributor data
   saledetailsList: AdSaledetails[] = []  // sale details array
   saledetaisd!: AdSaledetails;
 
@@ -129,7 +129,7 @@ export class AdSalesComponent implements OnInit {
 
 
 
-  AddtoCard() {                    // Add sale_Details to array 
+  AddtoCard() {                    // Add sale_Details to array
     this.saledetaisd = {
 
       // private long sale_id;
@@ -149,7 +149,7 @@ export class AdSalesComponent implements OnInit {
 
     }
     console.log('sales details : ', this.saledetaisd)
-    this.saledetailsList.push(this.saledetaisd);          // push into sales details array 
+    this.saledetailsList.push(this.saledetaisd);          // push into sales details array
 
     this.addForm = this.formBuilder.group({
 
@@ -167,7 +167,7 @@ export class AdSalesComponent implements OnInit {
       mrp:[0]
 
     })
-    this.quantity=0;     // for previous ng model quantiy = 0      
+    this.quantity=0;     // for previous ng model quantiy = 0
    this.  getTotalPrice()
 
   }

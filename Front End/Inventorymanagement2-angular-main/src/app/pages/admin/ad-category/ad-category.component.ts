@@ -13,15 +13,15 @@ export class AdCategoryComponent  implements OnInit {
 
 
 
-  
+
   btnvisibility: boolean = true;
   createform: boolean = false;
-Productformlabel: string = 'Add Warehouse';  
-  empformbtn: string = 'Save'; 
-  
+Productformlabel: string = 'Add Warehouse';
+  empformbtn: string = 'Save';
+
   addForm!:FormGroup;
   categories !: AdCategories[];
-  
+  page: number = 1; 
   constructor(private formBuilder: FormBuilder,  private barService: CategoryService,  private router: Router) { }
 
   ngOnInit(): void {
@@ -30,13 +30,13 @@ Productformlabel: string = 'Add Warehouse';
       code:[''],
       name:[''],
       description:[''],
-     
+
     })
     this.getall();
 
 
 
-   
+
   }
 
   getall(){
@@ -52,49 +52,49 @@ Productformlabel: string = 'Add Warehouse';
      })
   };
 
-  delete(product: AdCategories): void {  
-    this.barService.delete(product.id)  
-      .subscribe(data =>{  
+  delete(product: AdCategories): void {
+    this.barService.delete(product.id)
+      .subscribe(data =>{
         this.ngOnInit();
-        
-      })  
+
+      })
   }
 
   editEmp(product: AdCategories): void {
 
-    localStorage.removeItem('proId');  
+    localStorage.removeItem('proId');
     // let proid = 0;
     localStorage.setItem('proId', product.id.toString());
-    let proid: any = localStorage.getItem('proId'); 
-    if (+proid > 0) {  
+    let proid: any = localStorage.getItem('proId');
+    if (+proid > 0) {
       this.barService.getById(+proid).subscribe(
         data => {this.addForm.patchValue(data);}
-        )  
-      this.btnvisibility = false;  
-      this.Productformlabel = 'Edit Product';  
-      this.empformbtn = 'Update';  
-    }  
+        )
+      this.btnvisibility = false;
+      this.Productformlabel = 'Edit Product';
+      this.empformbtn = 'Update';
+    }
 
 
-  } 
+  }
 
   update(){
-    this.barService.update(this.addForm.value).subscribe(data =>{  
-     
-      this.createform =false 
-      this.btnvisibility = true;  
-      this.Productformlabel = 'Add Employee';  
-      this.empformbtn = 'Save';  
+    this.barService.update(this.addForm.value).subscribe(data =>{
+
+      this.createform =false
+      this.btnvisibility = true;
+      this.Productformlabel = 'Add Employee';
+      this.empformbtn = 'Save';
     } )
 
   };
 
   show(){ this.createform =true }
   hide(){ this.createform =false }
-  
 
 
 
- 
+
+
 
 }

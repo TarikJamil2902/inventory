@@ -12,7 +12,7 @@ import lombok.Data;
 public class DistributorProducts {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private long product_id;
 	private long distributor_id;

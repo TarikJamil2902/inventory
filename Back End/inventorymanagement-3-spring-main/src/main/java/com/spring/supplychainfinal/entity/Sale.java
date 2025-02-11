@@ -14,7 +14,7 @@ public class Sale {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private long sale_id;
 	    private String date;
 	    private String status;

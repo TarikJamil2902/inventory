@@ -13,7 +13,7 @@ public class Purchase {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long purchase_id;
     private String brand_name;
     private long product_id;

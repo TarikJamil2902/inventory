@@ -1,9 +1,9 @@
 <div  class='container'>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              
+
     <a  routerLink="/ad-home/ad-saleslist"><button class="btn btn-primary" type="button">  <i class="fa-solid fa-list me-2"></i> </button></a>
   </div>
-   
+
  <h3 style="text-align:center ;background-color:DodgerBlue; padding:2px; color: black;">Stock Out</h3><br>
 
  <!-- dropdown-->
@@ -11,26 +11,26 @@
 
   <div class="row g-3">
     <div class="col-sm-2">
-      <input  type="text" class="form-control"  value="{{nextValue}}"  placeholder="Purchase id"> 
+      <input  type="text" class="form-control"  value="{{nextValue}}"  placeholder="Purchase id">
     </div>
     <div class="col-sm-3"></div>
     <div class="col-sm-2">
-      
+
     </div>
     <div class="col-sm-2">
-     
+
     </div>
     <div class="col-sm-2"></div>
   </div>
  <div class="row g-3">
- 
-   
+
+
     <div class="col-sm-2">
       <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;"> Brand</p>
       <select  class="form-select"    (change)="productsfrombrand($event)"  formControlName="brand_name" >
         <option >-Select -</option>
         <option *ngFor="let b of brnads "  [value]="b.name"> {{b.name}} </option>
-       
+
       </select>
 
     </div>
@@ -44,55 +44,55 @@
 
     </div>
     <div class="col-sm-1">
-   
-    
+
+
     </div>
     <div class="col-sm-2">
       <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">  Distributor </p>
-          
+
      <select  class="form-select"       (change)="dilleridevent($event)">
       <option> -Select -</option>
       <option   *ngFor="let d of distributorlist"   [value]="d.id" >{{d.name}} [{{d.id}}]</option>
-     
+
     </select>
-    
+
       </div>
       <div class="col-sm-2">
-<!--          
+<!--
         <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Warehouse</p>
-          
+
         <select  class="form-select"    formControlName="supplier_name" >
          <option> -Select -</option>
          <option   *ngFor="let w of warehouselist3">{{w.name}}  </option>
-        
+
        </select> -->
           </div>
           <div class="col-sm-2">
-             
+
                 <input type="date" class="form-control" placeholder="18/01/23"   [(ngModel)]="date"    formControlName="date">
                 <p style="background-color: rgb(220, 236, 251);text-align: center; color: black; margin-top: 10px; margin-bottom: 0px;">Payment Method</p>
                 <select  class="form-select"  formControlName="payment_method" >
                   <option> -Select -</option>
                   <option > Cash </option>
                   <option > Chack </option>
-                 
+
                 </select>
 
               </div>
   </div><br><br>
 <!--dropdown end-->
  <div class="row g-3">
-   
+
   <div class="col-sm-2">
   <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Product Name</p>
     <input type="text" class="form-control"  value="{{pname}}"    formControlName="product_name" >
     <!-- <div>{{abc}}</div> -->
-   
 
-    
+
+
   </div>
   <input hidden value="{{productid}}"  >
-  
+
   <div class="col-sm-1">
      <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Brand</p>
     <input type="text" class="form-control"  value="{{abc3}}" >
@@ -101,7 +101,7 @@
     <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Availabe Stock</p>
    <input type="text" class="form-control"  value="{{totalstcok}}" >
  </div>
- 
+
   <div class="col-sm-1">
   <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Unit</p>
     <input type="text" class="form-control" value="{{abc2}}"    formControlName="product_unit" >
@@ -110,7 +110,7 @@
     <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Price</p>
       <input type="number" class="form-control" value="{{purchaeprice}}"    formControlName="product_price" >
     </div>
-    
+
     <div class="col-sm-1">
         <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;" >Quantity</p>
           <input type="number" class="form-control" name="quantity" id="quantity" [(ngModel)]="quantity" (click)="calculateResult()" (change)="calculateResult()"  formControlName="product_quantity" >
@@ -149,29 +149,29 @@
   </tr>
 
 </div> -->
-<div class="table-responsive ">  
-  <table class="table table-sm  table-bordered border-primary"   style=" border: 1px solid black;;border-spacing: 5px;"  >  
-    <thead>  
-      <tr style="padding:5px">  
+<div class="table-responsive ">
+  <table class="table table-sm  table-bordered border-primary"   style=" border: 1px solid black;;border-spacing: 5px;"  >
+    <thead>
+      <tr style="padding:5px">
         <th>Serial</th>
-        <th>Product Id</th> 
-        <th> Name</th>  
-        <th>Brand Name</th>  
-         
-        <th>Price</th> 
-        <th>Quantity</th> 
-        <th>Total</th>    
-             
+        <th>Product Id</th>
+        <th> Name</th>
+        <th>Brand Name</th>
+
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+
         <th>Sale Id</th>
         <th>Action</th>
-         
-       
 
-      
 
-      </tr>  
-    </thead>  
-    <tbody> 
+
+
+
+      </tr>
+    </thead>
+    <tbody>
       <tr *ngFor="let p of saledetailsList; let i = index "  >
         <td>{{i+1}}</td>
         <td>{{p.product_id}}</td>
@@ -180,22 +180,22 @@
       <td>{{p.unit_price}}</td>
       <td>{{p.quantity}}</td>
       <td>{{p.total}}</td>
-      
+
       <td>{{p.sale_id}}</td>
       <td><button class="btn btn-primary btn-sm"  (click)="removeItem(i)"  > <i class="fas fa-trash-alt"></i></button></td>
-     
-     
-      
 
-      
-     <!-- <td> <button class="btn btn-info" (click)="editEmp(p)"  (click)="show()" >Edit</button></td> 
+
+
+
+
+     <!-- <td> <button class="btn btn-info" (click)="editEmp(p)"  (click)="show()" >Edit</button></td>
       <td> <button class="btn btn-danger" (click)="delete(p)">Delete</button></td>  -->
 
      </tr>
-     
-    </tbody>  
-  </table>  
-</div>  
+
+    </tbody>
+  </table>
+</div>
 <div class="d-grid gap-2">
   <div class="row g-3">
     <div class="col-sm-9"></div>
@@ -204,9 +204,9 @@
       <input type="number" value="{{grandTotalsss}}"  class="form-control">
     </div>
   </div>
-    
-    <button   class="btn btn-primary" type="button"  (click)="addsalesdata()" >Save</button>     <!-- [routerLink]="['/ad-home/',{salesid},'saleinvoice']"--> 
-   
+
+    <button   class="btn btn-primary" type="button"  (click)="addsalesdata()" >Save</button>     <!-- [routerLink]="['/ad-home/',{salesid},'saleinvoice']"-->
+
 <!-- // routerLink="/ad-home/stockin-invoice" -->
 
   </div>

@@ -55,10 +55,11 @@ import { DisSaleComponent } from './pages/distributor/dis-sale/dis-sale.componen
 import { AdSalereturnComponent } from './pages/admin/ad-salereturn/ad-salereturn.component';
 import { DisCustomerComponent } from './pages/distributor/dis-customer/dis-customer.component';
 import { DisSalelistComponent } from './pages/distributor/dis-salelist/dis-salelist.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
- 
+
 
 
 
@@ -71,7 +72,7 @@ import { DisSalelistComponent } from './pages/distributor/dis-salelist/dis-salel
     LoginComponent,
     HomeComponent,
     TestComponent,
-  
+
     AdDashboardComponent,
     AdHomeComponent,
     AdProductComponent,
@@ -115,17 +116,18 @@ import { DisSalelistComponent } from './pages/distributor/dis-salelist/dis-salel
     AdSalereturnComponent,
     DisCustomerComponent,
     DisSalelistComponent,
-  
-   
-   
-    
+
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

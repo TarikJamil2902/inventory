@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class Distributor {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String code;
 	private String name;

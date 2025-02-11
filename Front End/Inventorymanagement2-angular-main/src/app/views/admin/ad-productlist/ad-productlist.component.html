@@ -9,25 +9,25 @@
   <div style="background-color: white;">
     <div  class='container' >
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      
+
       <button class="btn btn-primary" type="button" (click)="hide()">  <i class="fa-solid fa-list me-2"></i> </button>
-    </div> 
-    
+    </div>
+
     <div class="container " >
     <br>
       <div class="row">
-      
-        <!-- First Grid start --> 
+
+        <!-- First Grid start -->
         <div class="col">
-        
-       
+
+
       <h3 style=" text-align:center;">Edit PRODUCT</h3>
-   
-          
-       <br> 
+
+
+       <br>
        <div class="container " >
        <form  [formGroup]="addForm"  >
-      
+
       <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -38,8 +38,8 @@
       </div>
       </div>
       </div>
-      
-      
+
+
        <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -50,7 +50,7 @@
       </div>
       </div>
       </div>
-      
+
           <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -61,7 +61,7 @@
       </div>
       </div>
       </div>
-      
+
        <div class="row g-3">
       <div class="col">
         <div class="mb-3 row">
@@ -71,8 +71,8 @@
              <select  class="form-select"   formControlName="product_brand" >
               <!-- <option   >Select</option> -->
                 <option  *ngFor="let p of brands" >{{p.name}}</option>
-              
-              </select> 
+
+              </select>
           </div>
         </div>
       </div>
@@ -84,18 +84,18 @@
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-3 col-form-label"  >Categories</label>
             <div class="col-sm-9">
-             
+
                <select  class="form-select"   formControlName="product_category">
                 <!-- <option>-Select-</option> -->
                   <option  *ngFor="let p of categories" >{{p.name}}</option>
-                
-                </select> 
+
+                </select>
             </div>
           </div>
         </div>
         </div>
-      
-    
+
+
       <div class="row g-3">
         <div class="col">
         <div class="mb-3 row">
@@ -107,7 +107,7 @@
         </div>
         </div>
 
-      
+
          <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -128,7 +128,7 @@
       </div>
       </div>
       </div>
-      
+
         <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -139,7 +139,7 @@
       </div>
       </div>
       </div>
-      
+
         <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -150,7 +150,7 @@
       </div>
       </div>
       </div>
-     
+
         <div class="row g-3">
       <div class="col">
       <div class="mb-3 row">
@@ -160,7 +160,7 @@
         </div>
       </div>
       </div>
-      </div>  
+      </div>
       <div class="row g-3">
         <div class="col">
         <div class="mb-3 row">
@@ -170,25 +170,25 @@
           </div>
         </div>
         </div>
-        </div> 
-       
-     
-     
-       
-     
-     
-      <button type="submit" class="btn btn-primary"   (click)="update()">Update</button> 
-    </form> 
-    <br><br>
-    
-       </div>   
-          
-     
-          
-          
         </div>
-        <!-- First Grid end -->  
-        
+
+
+
+
+
+
+      <button type="submit" class="btn btn-primary"   (click)="update()">Update</button>
+    </form>
+    <br><br>
+
+       </div>
+
+
+
+
+        </div>
+        <!-- First Grid end -->
+
         <!-- 2 nd grid start -->
          <div class="col">
 
@@ -197,7 +197,7 @@
 
 
 
-          
+
         <!-- <h4 style="text-align:center;">Additional Units</h4>
         <div class="row g-3">
         <span><b>Main Stock</b></span>
@@ -214,7 +214,7 @@
         <input type="text" class="form-control" >
       </div>
     </div><br>
-    
+
     <div class="row g-3">
         <span><b>Warehouse Stock</b></span>
       <div class="col-sm-4">
@@ -230,7 +230,7 @@
         <input type="text" class="form-control" >
       </div>
     </div><br>
-    
+
     <div class="row g-3">
         <span><b>Distributor Stock</b></span>
       <div class="col-sm-4">
@@ -248,38 +248,38 @@
     </div><br>
     <div class="d-grid gap-2">
       <button class="btn btn-primary" type="button">Save</button>
-      
+
     </div> -->
-              
-      </div> 
+
+      </div>
     </div>
-    
-    
-    
+
+
+
     </div>
     </div>
 
 
     <!-- list start-->
-<!-- 
+<!--
     <div Class="container">
 
-      <div class="col-md-12">  
-        <h2> Product Table</h2>  
-        <div class="table-responsive">  
-          <table class="table">  
-            <thead>  
-              <tr>  
-                <th>Id</th>  
-                <th>Product Code</th>  
-                <th>Name</th>  
-                <th>Quantity</th>  
-                <th>Price</th>  
-                <th>Action</th>  
-                <th>Action</th>  
-              </tr>  
-            </thead>  
-            <tbody> 
+      <div class="col-md-12">
+        <h2> Product Table</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Product Code</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
              <tr *ngFor="let p of products" >
               <td>{{p.id}}</td>
               <td>{{p.product_code}}</td>
@@ -288,17 +288,17 @@
               <td>{{p.product_price}}</td>
               <td> <button class="btn btn-info" (click)="editEmp(p)">Edit</button></td>
               <td> <button class="btn btn-danger" (click)="delProduct(p)">Delete</button></td>
-      
+
              </tr>
-            </tbody>  
-          </table>  
-        </div>  
-      </div>  
+            </tbody>
+          </table>
+        </div>
+      </div>
       </div> -->
     <!--List end-->
-    
+
     </div>
-    
+
 
 
   </div>
@@ -311,10 +311,10 @@
 
 <div class="container">
 
-  <div *ngIf="!createform">  
+  <div *ngIf="!createform">
     <br>
-    
-    <a href="#" routerLink="/ad-home/ad-product" class="btn btn-success"><i class="fa-solid fa-circle-plus me-2"></i>Add New Product</a> 
+
+    <a href="#" routerLink="/ad-home/ad-product" class="btn btn-success"><i class="fa-solid fa-circle-plus me-2"></i>Add New Product</a>
     <h1 style=" text-align: center;">Product List</h1>
     <br>
     <table class="table table-striped table-bordered   border-info ">
@@ -336,7 +336,7 @@
               </tr>
         </thead>
         <tbody>
-              <tr *ngFor="let post of posts ; let i = index">
+              <tr *ngFor="let post of posts ; let i = index ">
                 <td>{{[i+1]}} </td>
                 <td>{{ post.product_id }}</td>
                 <td>{{ post.product_name }}</td>
@@ -349,7 +349,7 @@
                 <td>{{ post.distributor_rate }}</td>
                 <td>{{ post.retail_rate }}</td>
                 <td>{{ post.mrp }}</td>
-             
+
                 <td>
                   <a  [routerLink]="['/ad-home/', post.product_id, 'view']" class="btn btn-info btn-sm" style="margin-right: 10px;">View</a>
                   <a   class="btn btn-primary btn-sm"  style="margin-right: 10px;"  (click)="editEmp(post)" >Edit</a>

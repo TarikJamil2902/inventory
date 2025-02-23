@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 import { AdDistributor } from 'src/app/model/admin/ad-distributor.model';
 import { AdSaledetails } from 'src/app/model/admin/ad-saledetails.model';
 import { AdSale } from 'src/app/model/admin/ad-sales.model';
@@ -24,6 +25,8 @@ export class AdSaleinvoiceComponent implements OnInit{
               private distributorService: AdDistributorService
     ){}
   ngOnInit(): void {
+
+    this.saledetailslist = AppComponent.list;
 
      this.salelistByid ()
     this.allsaledetails()

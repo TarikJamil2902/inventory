@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 import { AdBrand } from 'src/app/model/admin/ad-brand.model';
 import { AdDistributor } from 'src/app/model/admin/ad-distributor.model';
 import { AdProduct } from 'src/app/model/admin/ad-product.model';
@@ -174,15 +175,16 @@ export class AdSalesComponent implements OnInit {
 
   saleids!: any;
 
-  addsalesdata() {                    //Sale Data
+  addsalesdata() {   
+    AppComponent.list = this.saledetailsList                 //Sale Data saledetailsList
     this.saledatas = {
       date: this.date,
       grand_total: this.grandTotalsss,
       distributor_id: this.dillerid,
-      status: this.statusdata
+      status: this.statusdata,
       // warehouse_id: ,
       // customer_id :,
-      // sale_details_id :
+      sale_details_id : 172
     }
 
     this.saleService.saveSale(this.saledatas).subscribe(res => {
@@ -233,7 +235,7 @@ export class AdSalesComponent implements OnInit {
     // console.log('diller id =', this.dillerid)
   }
 
-  nextValue!: number;
+  nextValue: number = 193;
 
 
 

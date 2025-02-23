@@ -58,14 +58,14 @@
 
       </div>
       <div class="col-sm-2">
-<!--
+
         <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;">Warehouse</p>
 
         <select  class="form-select"    formControlName="supplier_name" >
          <option> -Select -</option>
          <option   *ngFor="let w of warehouselist3">{{w.name}}  </option>
 
-       </select> -->
+       </select>
           </div>
           <div class="col-sm-2">
 
@@ -113,7 +113,7 @@
 
     <div class="col-sm-1">
         <p style="background-color: rgb(220, 236, 251);text-align: center; color: black;" >Quantity</p>
-          <input type="number" class="form-control" name="quantity" id="quantity" [(ngModel)]="quantity" (click)="calculateResult()" (change)="calculateResult()"  formControlName="product_quantity" >
+          <input type="number" class="form-control" name="quantity" id="quantity" [(ngModel)]="quantity" (click)="calculateResult()" (input)="calculateResult()"  formControlName="product_quantity" >
           <!-- <label style="text-align:justify;">Sub Total :</label> -->
           <!-- <label>Discount :</label><br>
           <label>Total :</label> -->

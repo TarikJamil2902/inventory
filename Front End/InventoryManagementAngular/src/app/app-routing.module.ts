@@ -68,9 +68,9 @@ const routes: Routes = [ {
     children :[
               {  path:"" ,redirectTo:"ad-dashboard" , pathMatch:"full"},
               { path: 'ad-dashboard', component:AdDashboardComponent  },
-              
+
               {path: 'ad-product',component:AdProductComponent},
-              {path:'ad-supplier', component:AdSupplierComponent},
+               {path:'ad-supplier', component:AdSupplierComponent},
               {path:'ad-product-stock', component:AdProductStockComponent},
               {path:"ad-receiving", component:AdReceivingComponent},
               {path:"ad-sales",component:AdSalesComponent},
@@ -87,24 +87,24 @@ const routes: Routes = [ {
               {path:"ad-subcategory",component:AdSubcategoryComponent},
               {path:"login-reglist",component:AdLoginreglistComponent},
               {path:"productlist-brand",component:ProductlistBrandComponent},
-              {path:"post/:postId/product-edit",component:AdProducteditComponent},    
-              {path:"stock-pending",component:AdStockinpendingComponent},   
-              {path:"ad-saleslist",component:AdSaleslistComponent}, 
-              {path:"ad-paymentlist",component:AdPaymentlistComponent}, 
+              {path:"post/:postId/product-edit",component:AdProducteditComponent},
+              {path:"stock-pending",component:AdStockinpendingComponent},
+              {path:"ad-saleslist",component:AdSaleslistComponent},
+              {path:"ad-paymentlist",component:AdPaymentlistComponent},
               {path:":postId/view",component:AdSingleproductviewComponent},
               {path:":postId/saleinvoice", component:AdSaleinvoiceComponent},
               {path:"ad-wastageentry", component:AdWastagentryComponent},
               {path:"ad-salereturn", component:AdSalereturnComponent},
-             
+
 
               {path:"**", component:NotFoundComponent}
-             
+
             ]},
  { path: 'ware-home',  component: WareHomeComponent,
      children :[
               { path: 'ware-dashboard', component:AdDashboardComponent  },
-       
-             
+
+
             ]},
  { path: 'dis-home',  component: DisHomeComponent,
        children :[
@@ -120,11 +120,11 @@ const routes: Routes = [ {
                       {path:'dis-salelist',component:DisSalelistComponent},
 
 
-                      
+
                       {path:"**", component:NotFoundComponent}
-                      
-               
-                     
+
+
+
                     ]}
 ];
 
